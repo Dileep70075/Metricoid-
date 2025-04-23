@@ -1,34 +1,51 @@
 import React, { useState } from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
+  // const handleSelect = (e) => {
+    
+  // };
+
+  const navigate = useNavigate();
+
   const handleSelect = (e) => {
+    const selectedValue = e.target.value;
+    setSelectedCategory(selectedValue);
     setSelectedCategory(e.target.value);
+    // Handle navigation based on the selected value
+    if (selectedValue === 'about') {
+      navigate('/about');
+    } else if (selectedValue === 'services') {
+      navigate('/services');
+    } else if (selectedValue === 'Marketing') {
+      // navigate('/marketing');
+    }
+    // You can add more conditions as needed for other options
   };
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">Welcome to our website!</h1>
-      <p className="mb-6">This is a sample website built with React.js and Tailwind CSS.</p>
 
       {/* Dropdown */}
       <div className="mb-6">
-        <label className="mr-2 font-medium">Choose category:</label>
-        <select
-          value={selectedCategory}
-          onChange={handleSelect}
-          className="border rounded px-3 py-1"
-        >
-          <option value="All">All</option>
-          <option value="Tech">Tech</option>
-          <option value="Design">Design</option>
-          <option value="Marketing">Marketing</option>
-        </select>
-      </div>
+      <label className="mr-2 font-medium">Choose category:</label>
+      <select
+        value={selectedCategory}
+        onChange={handleSelect}
+        className="border rounded px-3 py-1"
+      >
+        <option value="All">All</option>
+        <option value="about">about</option>
+        <option value="services">services</option>
+        <option value="Marketing">Marketing</option>
+      </select>
+    </div>
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
