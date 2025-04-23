@@ -1,14 +1,57 @@
 import React from 'react';
 
+const Style = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '10px',
+  width: '100%',
+};
+
+const Style1 = {
+  width: '40%',
+  padding: '10px',
+  margin: '5px 0',
+  borderRadius: '4px',
+  border: '1px solid #ccc',
+};
+
+const Style2 = {
+  width: '40%',
+  padding: '10px',
+  margin: '5px 0',
+  borderRadius: '4px',
+  border: '1px solid #ccc',
+  minHeight: '120px',
+  resize: 'vertical',
+};
+
+const Style3 = {
+  backgroundColor: '#3b82f6', // Tailwind blue-500
+  color: 'white',
+  padding: '10px 20px',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  border: 'none',
+  marginTop: '10px',
+};
+
 function Contact() {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Contact us</h1>
-      <form>
-        <input type="text" placeholder="Name" className="block p-2 mb-4" />
-        <input type="email" placeholder="Email" className="block p-2 mb-4" />
-        <textarea placeholder="Message" className="block p-2 mb-4"></textarea>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+    <div >
+      <h1 style={{textAlign:'center'}}>Contact Us</h1>
+
+      <form style={Style}>
+        <input style={Style1} type="text" placeholder="Name" />
+        <input style={Style1} type="email" placeholder="Email" />
+        <textarea style={Style2} placeholder="Message"></textarea>
+        <button
+          type="submit"
+          style={Style3}
+        >
+          Send
+        </button>
       </form>
     </div>
   );
