@@ -1,0 +1,23 @@
+/* .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-zoom:hover {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+   */
+   .card-img-container {
+    overflow: hidden;
+    border-top-left-radius: 0.375rem; /* Match Bootstrap card radius */
+    border-top-right-radius: 0.375rem;
+  }
+  
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  }
+  
