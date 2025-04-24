@@ -3,7 +3,7 @@ import React from 'react';
 
 function Services() {
   return (
-    <div style={{padding:'35px'}}>
+    <div style={{padding:'70px', backgroundColor:'#CCE5FF'}}>
       <h1 >Our Services</h1>
       <p>We offer a wide range of services to meet your needs. Our services include:</p>
       <ul>

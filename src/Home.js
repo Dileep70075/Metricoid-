@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [openAccordion, setOpenAccordion] = useState(null);
   const navigate = useNavigate();
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
@@ -17,6 +18,13 @@ function Home() {
     } else if (selectedValue === 'services') {
       navigate('/services');
     }
+    else if (selectedValue === 'Marketing') {
+      navigate('/marketing');
+    }
+  };
+
+  const toggleAccordion = (index) => {
+    setOpenAccordion(openAccordion === index ? null : index);
   };
 
   const styles = {
@@ -24,6 +32,7 @@ function Home() {
       padding: '2rem',
       fontFamily: 'Arial, sans-serif',
       textAlign: 'center',
+      backgroundColor:'#CCE5FF'
     },
     heading: {
       fontSize: '2rem',
@@ -92,6 +101,18 @@ function Home() {
       borderRadius: '4px',
       marginBottom: '1rem',
     },
+    accordionItem: {
+      border: '1px solid #ccc',
+      borderRadius: '5px',
+      marginBottom: '1rem',
+      padding: '1rem',
+      textAlign: 'left',
+      cursor: 'pointer',
+    },
+    accordionContent: {
+      marginTop: '1rem',
+      color: '#555',
+    },
   };
 
   const cardData = [
@@ -133,7 +154,24 @@ function Home() {
   ];
 
   return (
-    <div style={styles.container}>
+    <div style={{...styles.container,padding:'80px'}}>
+      <div style={styles.accordionItem} onClick={() => toggleAccordion(0)}>
+        <strong>Content 1</strong>
+        {openAccordion === 0 && (
+          <div style={styles.accordionContent}>
+            Digital Marketing refers to the use of digital channels, platforms, and technologies to promote products or services to consumers and businesses. It encompasses a wide range of strategies, including search engine optimization (SEO), content marketing, social media marketing, email campaigns, and pay-per-click (PPC) advertising.
+          </div>
+        )}
+      </div>
+      <div style={styles.accordionItem} onClick={() => toggleAccordion(1)}>
+        <strong>Content 2</strong>
+        {openAccordion === 1 && (
+          <div style={styles.accordionContent}>
+            With the rise of internet usage and mobile devices, digital marketing has become a crucial part of any modern business strategy, offering the ability to reach a global audience, track user engagement in real-time, and personalize messaging based on data insights.
+          </div>
+        )}
+      </div>
+
       <h1 style={styles.heading}>Welcome to our website!</h1>
 
       <div style={{ marginBottom: '1.5rem' }}>

@@ -39,7 +39,7 @@ const Style3 = {
 
 function Contact() {
   return (
-    <div >
+    <div style={{backgroundColor:'#CCE5FF',height:'730px'}} >
       <h1 style={{textAlign:'center',marginTop:'-1px', paddingTop:'60px'}}>Contact Us</h1>
 
       <form style={Style}>

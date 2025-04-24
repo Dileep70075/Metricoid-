@@ -2,8 +2,8 @@ import React from 'react';
 
 function About() {
   return (
-    <div style={{marginTop:'-0px'}}>
-      <div style={{padding:'32px'}}>
+    <div style={{marginTop:'-0px'  ,backgroundColor:'#CCE5FF'}}>
+      <div style={{padding:'70px'}}>
       <h1 >About Us - Digital Marketing</h1>
 
       <p >
