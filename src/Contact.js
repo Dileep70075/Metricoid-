@@ -6,6 +6,7 @@ const Style = {
   alignItems: 'center',
   gap: '10px',
   width: '100%',
+  
 };
 
 const Style1 = {
@@ -14,6 +15,7 @@ const Style1 = {
   margin: '5px 0',
   borderRadius: '4px',
   border: '1px solid #ccc',
+  borderRadius:'10px'
 };
 
 const Style2 = {
@@ -24,6 +26,7 @@ const Style2 = {
   border: '1px solid #ccc',
   minHeight: '120px',
   resize: 'vertical',
+  borderRadius:'10px'
 };
 
 const Style3 = {
@@ -35,6 +38,7 @@ const Style3 = {
   fontWeight: 'bold',
   border: 'none',
   marginTop: '10px',
+  borderRadius:'10px'
 };
 
 function Contact() {
