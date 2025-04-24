@@ -1,15 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.css';
+
 function Header() {
+  const styles = {
+    header: {
+      backgroundColor: '#2c3e50',
+      position:'fixed',
+      width:'100%',
+      color: 'white',
+      height:"50px",
+      fontSize:'30px',
+      textAlign: 'center',
+    },
+    nav: {
+      display: 'flex',
+      justifyContent: 'center',
+      gap: '2rem',
+    },
+    ul: {
+      listStyle: 'none',
+      display: 'flex',
+      gap: '1.5rem',
+      padding: 0,
+      margin: 0,
+    },
+    link: {
+      color: 'white',
+      textDecoration: 'none',
+      fontSize: '1.1rem',
+      fontWeight: 'bold',
+    },
+  };
+
   return (
-    <header className="bg-blue-600 text-white shadow-md" >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between p-4">
-        <ul className="flex items-center space-x-6">
-          <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
-          <li><Link to="/about" className="hover:text-gray-300">About</Link></li>
-          <li><Link to="/services" className="hover:text-gray-300">Services</Link></li>
-          <li><Link to="/contact" className="hover:text-gray-300">Contact</Link></li>
+    <header style={styles.header}>
+      <nav style={styles.nav}>
+        <ul style={styles.ul}>
+          <li><Link to="/" style={styles.link}>Home</Link></li>
+          <li><Link to="/about" style={styles.link}>About</Link></li>
+          <li><Link to="/services" style={styles.link}>Services</Link></li>
+          <li><Link to="/contact" style={styles.link}>Contact</Link></li>
         </ul>
       </nav>
     </header>

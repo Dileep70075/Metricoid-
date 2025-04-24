@@ -40,7 +40,7 @@ const Style3 = {
 function Contact() {
   return (
     <div >
-      <h1 style={{textAlign:'center'}}>Contact Us</h1>
+      <h1 style={{textAlign:'center',marginTop:'-1px', paddingTop:'60px'}}>Contact Us</h1>
 
       <form style={Style}>
         <input style={Style1} type="text" placeholder="Name" />
