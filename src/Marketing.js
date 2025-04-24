@@ -72,7 +72,7 @@ function MarketingCarousel() {
                 <Container style={{ display: 'flex', gap: '30px', marginTop: '4px' }}>
                     <Row>
                         <Col >
-                            <Card>
+                            <Card> 
                                 <div className="card-img-container">
                                     <Card.Img
                                         className="hover-zoom"
